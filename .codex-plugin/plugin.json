@@ -1,18 +1,18 @@
 {
   "name": "shaalan-skills",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A growing collection of practical software-development skills for Codex and Claude Code.",
   "author": {
-    "name": "Shaalan"
+    "name": "Shaalan Marwan"
   },
   "homepage": "https://github.com/ShaalanMarwan/skills",
   "license": "MIT",
-  "keywords": ["skills", "flutter", "dart", "drift", "database"],
+  "keywords": ["skills", "flutter", "dart", "drift", "powersync", "database", "offline-first"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Shaalan's Skills",
     "shortDescription": "Practical skills for reliable software development.",
-    "longDescription": "A composable collection of source-backed workflows for Codex and Claude Code, beginning with comprehensive Drift database development for Flutter.",
+    "longDescription": "A composable collection of source-backed Flutter workflows for Codex and Claude Code, including comprehensive Drift database development and PowerSync offline synchronization with Cloud or self-hosted deployments.",
     "developerName": "Shaalan Marwan",
     "category": "Developer Tools",
     "capabilities": ["Read", "Write"],
@@ -20,7 +20,9 @@
     "defaultPrompt": [
       "Add Drift persistence to my Flutter app.",
       "Create and test a safe Drift migration.",
-      "Review my Drift schema and queries."
+      "Review my Drift schema and queries.",
+      "Add PowerSync to my Flutter app and preserve its Drift database.",
+      "Design and validate a self-hosted PowerSync deployment."
     ]
   }
 }

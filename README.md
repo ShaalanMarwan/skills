@@ -12,6 +12,14 @@ Design, implement, migrate, test, and debug Drift databases in Flutter applicati
 
 The guidance was built from a complete audit of the official Drift documentation and checked against the Drift source repository.
 
+### `powersync-flutter`
+
+Build, self-host, test, operate, and debug offline-first Flutter applications with PowerSync. It covers the Flutter SDK, secure Sync Streams, backend uploads and conflict handling, authentication, source database replication, production self-hosting, and advanced client features.
+
+The skill detects whether an app already uses Drift. When it does, it preserves Drift and uses PowerSync's official `drift_sqlite_async` adapter so both systems share one database connection and reactive updates.
+
+This guidance was built from a complete audit of all 173 official PowerSync documentation pages and checked against the PowerSync Flutter SDK, Service, self-host demo, Drift adapter, and official agent-skill repositories.
+
 ## Repository structure
 
 ```text
@@ -19,10 +27,15 @@ The guidance was built from a complete audit of the official Drift documentation
 ├── .claude-plugin/plugin.json
 ├── .codex-plugin/plugin.json
 └── skills/
-    └── drift-flutter/
+    ├── drift-flutter/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   └── references/
+    └── powersync-flutter/
         ├── SKILL.md
         ├── agents/
-        └── references/
+        ├── references/
+        └── scripts/
 ```
 
 Future skills belong in their own directories under `skills/`.
@@ -47,6 +60,8 @@ The repository includes a native Codex manifest at `.codex-plugin/plugin.json`. 
 
 - [Drift documentation](https://drift.simonbinder.eu/)
 - [Drift source repository](https://github.com/simolus3/drift)
+- [PowerSync documentation](https://docs.powersync.com/)
+- [PowerSync GitHub organization](https://github.com/powersync-ja)
 
 ## License
 

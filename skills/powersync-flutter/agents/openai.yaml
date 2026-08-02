@@ -1,0 +1,4 @@
+interface:
+  display_name: "PowerSync for Flutter"
+  short_description: "Build offline-first Flutter apps with PowerSync"
+  default_prompt: "Use $powersync-flutter to add reliable offline sync to my Flutter app."
