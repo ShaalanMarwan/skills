@@ -1,0 +1,26 @@
+{
+  "name": "shaalan-skills",
+  "version": "0.2.0",
+  "description": "A growing collection of practical software-development skills for Codex and Claude Code.",
+  "author": {
+    "name": "Shaalan"
+  },
+  "homepage": "https://github.com/ShaalanMarwan/skills",
+  "license": "MIT",
+  "keywords": ["skills", "flutter", "dart", "drift", "database"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Shaalan's Skills",
+    "shortDescription": "Practical skills for reliable software development.",
+    "longDescription": "A composable collection of source-backed workflows for Codex and Claude Code, beginning with comprehensive Drift database development for Flutter.",
+    "developerName": "Shaalan Marwan",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/ShaalanMarwan/skills",
+    "defaultPrompt": [
+      "Add Drift persistence to my Flutter app.",
+      "Create and test a safe Drift migration.",
+      "Review my Drift schema and queries."
+    ]
+  }
+}

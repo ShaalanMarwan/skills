@@ -1,0 +1,4 @@
+interface:
+  display_name: "Drift for Flutter"
+  short_description: "Build reliable Flutter databases with Drift"
+  default_prompt: "Use $drift-flutter to add or improve a Drift database in my Flutter app."
