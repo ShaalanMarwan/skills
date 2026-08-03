@@ -1,0 +1,14 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Flutter Databases",
+      "description": "Database and offline-first development skills for Flutter.",
+      "skills": [
+        "drift-flutter",
+        "powersync-flutter"
+      ]
+    }
+  ]
+}
