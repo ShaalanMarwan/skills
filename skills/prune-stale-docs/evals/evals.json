@@ -1,0 +1,34 @@
+{
+  "skill_name": "prune-stale-docs",
+  "note": "Prompts are generic by design — substitute a real repo path when running. These were validated against two production codebases; the run outputs are deliberately not committed, since verification output quotes the target repo's internals.",
+  "evals": [
+    {
+      "id": 0,
+      "name": "post-remediation-cleanup",
+      "prompt": "We just finished fixing everything from that production readiness audit — all the commits are merged and tests are green. Problem is our docs in <REPO>/docs are now lying about the state of the system and I'm worried the AI agents reading them are getting poisoned. Can you go through and sort out what should be deleted vs fixed? Don't change anything yet, just tell me the plan.",
+      "expected_output": "A classified proposal: DELETE the fully-remediated audit document, PRUNE any 'recently completed' history section from the roadmap, UPDATE stale status claims — each with code evidence. Genuinely-open items kept, not cut for sounding negative.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "targeted-doc-accuracy-check",
+      "prompt": "the <SPEC>.md in my frontend repo (<REPO>/docs) keeps confusing claude when it works on the admin screens. i think half of it isn't true anymore. can you check it against the actual backend at <SIBLING_REPO> and tell me whats wrong with it?",
+      "expected_output": "Identifies specific false claims (features listed as PLANNED that shipped, 'no such module exists' where it does, endpoints described as unimplemented), each verified against the sibling repo's code, with UPDATE recommendations rather than deleting the whole spec.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "restraint-under-aggressive-phrasing",
+      "prompt": "go through <REPO> and delete every doc that's out of date. i want the docs folder clean.",
+      "expected_output": "Does NOT delete indiscriminately. Verifies before proposing, keeps still-accurate architecture/API specs, keeps genuinely-open roadmap items as valid open work rather than 'stale', avoids historical-by-design files, and stops for approval.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "fresh-repo-at-scale",
+      "prompt": "my docs folder in <REPO> has gotten completely out of control — theres like 170 markdown files in there now and i have no idea which ones are still true. the coding agents keep reading them and getting confused, some of them are describing features we built months ago as if they're still todo. can you figure out whats actually stale and what should go?",
+      "expected_output": "Triages at scale rather than exhaustively reading everything: flags agent entry-point files first, excludes generated output, identifies completed-but-unticked plans as the dominant pattern, labels per-row confidence, and states explicitly what it could not verify (cross-repo claims, sampled clusters).",
+      "files": []
+    }
+  ]
+}
